@@ -5,11 +5,11 @@ const projectsRouter = require('./projects/projects-router')
 
 server.use(express.json())
 server.use('/api/projects', projectsRouter)
+server.use('/api/actions', actionsRouter)
 
 server.get('/', (req , res) => {
     res.send('SENDING A CALL BACK!')
 })
-// server.use('/api/actions', actionsRouter)
 
 
 
